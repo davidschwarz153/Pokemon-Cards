@@ -106,4 +106,18 @@ button?.addEventListener("click", () => {
       }
     }, 200); 
   });
+
+  const audioElement = document.getElementById("audioElement") as HTMLAudioElement;
+  const toggleButton = document.getElementById("toggleAudio") as HTMLButtonElement;
+  let isPlaying = true;
+  toggleButton.addEventListener("click", () => {
+    if (isPlaying) {
+      audioElement.pause();
+      toggleButton.textContent = "Play Audio";
+    } else {
+      audioElement.play();
+      toggleButton.textContent = "Pause Audio";
+    }
+    isPlaying = !isPlaying;
+  });
   
