@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="./main.ts"></script>
+    <link rel="stylesheet" href="./styles.css" />
+    
+    <title>Pokemon Cards</title>
+  </head>
+  <body class="bg-emerald-700 flex flex-col justify-center items-center h-dvh text-gray-900 font-bold">
+    <main class="h-[95vh] w-[80vw] shadow-2xl rounded-4xl backdrop-blur-sm py-[2vh] ">
+        <form action="" class="flex flex-col justify-center items-center pt-5 gap-[2vh] ">
+            <div class="flex flex-col items-center gap-[2vh] ">
+                <label class="text-3xl" for="pkmn-name">Pokemon Name</label>
+                <input  id="pkmn-name" class="border-green-900 bg-emerald-700/[.5] border-2  shadow-2xl rounded-3xl w-[66vw] h-[5vh] pl-10 text-white" type="text" name="pkmn-name" placeholder="Pikachu">
+            </div>
+            <div class="flex gap-20">
+                <div class="flex flex-col items-center gap-2">
+                    <label class="text-2xl" for="type">Type</label>
+                    <select id="type" class="border-green-900 bg-emerald-700/[.5] border-2 shadow-2xl rounded-3xl w-[30vw] h-[5vh] pl-10 text-white" name="type" >
+                        <option value="Elektro">Elektro</option>
+                        <option value="Fire">Fire</option>
+                        <option value="Water">Water</option>
+                        <option value="Grass">Grass</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Ghost">Ghost</option>
+                        <option value="Dragon">Dragon</option>
+                        <option value="Ground">Ground</option>
+                    </select>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <label class="text-2xl" for="health">Health Points</label>
+                    <input id="health" class="border-green-900 bg-emerald-700/[.5] border-2 shadow-2xl rounded-3xl w-[30vw] h-[5vh] pl-10 text-white" type="number" name="health"  placeholder="80">
+                </div>
+
+            </div>
+            <div class="flex flex-col items-center gap-2">
+                <label class="text-2xl" for="picture">Picture (URL)</label>
+                <input id="picture" class="border-green-900 bg-emerald-700/[.5] border-2 shadow-2xl rounded-3xl w-[66vw] h-[5vh] pl-10 text-white" type="url" name="picture"  placeholder="url">
+            </div>
+            <div>
+                <button class=" border-red-900 bg-orange-900/[.7] border-4 shadow-2xl rounded-xl text-white w-[10vw] h-[5vh] mt-6  " type="button" id="button">Add Card</button>
+                <!-- <button class=" border-red-900 bg-orange-900/[.7] border-4 shadow-2xl rounded-xl text-white w-[10vw] h-[5vh] mt-6  " type="button" id="save-all">Save All</button> -->
+                <!-- <button class=" border-red-900 bg-orange-900/[.7] border-4 shadow-2xl rounded-xl text-white w-[10vw] h-[5vh] mt-6  " type="button" id="load-cards">Load Cards</button> -->
+            </div>
+        </form>
+        <section class="flex flex-col justify-center items-center p-10 gap-6" >
+            <h1 class="text-3xl" >Your Cards:</h1>
+            <article id="cards" class="grid grid-cols-5 grid-rows-1 gap-x-10" >
+
+
+
+            </article>
+        </section>
+    </main>
+  </body>
+</html>
